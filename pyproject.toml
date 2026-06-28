@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmail-autoresponder"
+version = "0.1.0"
+description = "A rule-based Gmail automated reply framework with dashboard support"
+requires-python = ">=3.11"
+dependencies = [
+  "Flask==3.1.0",
+  "google-api-python-client==2.168.0",
+  "google-auth-oauthlib==1.2.0",
+  "python-dotenv==1.0.1",
+]
+
+[project.scripts]
+gmail-autoresponder = "gmail_autoresponder.cli:main"
+gmail-dashboard = "gmail_autoresponder.dashboard:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

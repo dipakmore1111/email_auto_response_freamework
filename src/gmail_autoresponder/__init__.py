@@ -1,0 +1,2 @@
+"""Gmail auto-responder framework."""
+
