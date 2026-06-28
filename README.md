@@ -1,4 +1,4 @@
-# email_auto_response_freamework
+# email_auto_response_framework
 auto resopnses to email through ai 
 ```markdown
 #  AI Email Management & Response Framework
