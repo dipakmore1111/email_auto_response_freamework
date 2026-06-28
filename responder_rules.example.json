@@ -1,0 +1,44 @@
+{
+  "fallback_subject_prefix": "Re:",
+  "rules": [
+    {
+      "name": "pricing",
+      "keywords": ["price", "pricing", "quote", "cost"],
+      "subject_contains": [],
+      "sender_contains": [],
+      "body_contains": [],
+      "reply_subject": "",
+      "body_template": "Hi {sender_name},\n\nThanks for reaching out about pricing. We can absolutely help with that.\n\nIf you share a few details about your needs, I can send over the most relevant options and next steps.\n\n{signature}"
+    },
+    {
+      "name": "support",
+      "keywords": ["issue", "bug", "problem", "help"],
+      "subject_contains": ["support"],
+      "sender_contains": [],
+      "body_contains": ["not working", "broken"],
+      "reply_subject": "",
+      "body_template": "Hi {sender_name},\n\nThanks for your message. I am sorry you ran into an issue.\n\nPlease reply with any screenshots, error messages, or the steps you took before the problem happened, and I will help you troubleshoot it.\n\n{signature}"
+    },
+    {
+      "name": "meeting_request",
+      "keywords": ["meeting", "call", "schedule", "demo"],
+      "subject_contains": [],
+      "sender_contains": [],
+      "body_contains": [],
+      "reply_subject": "Re: {original_subject}",
+      "body_template": "Hi {sender_name},\n\nThanks for your message. I would be happy to coordinate a call.\n\nPlease send over a couple of time options that work for you, and I will confirm one of them.\n\n{signature}",
+      "attachments": []
+    },
+    {
+      "name": "brochure_request",
+      "keywords": ["brochure", "catalog", "company profile", "profile pdf", "presentation pdf"],
+      "subject_contains": [],
+      "sender_contains": [],
+      "body_contains": [],
+      "reply_subject": "Re: {original_subject}",
+      "body_template": "Hi {sender_name},\n\nPlease find the requested file attached.\n\n{signature}",
+      "attachments": ["attachments/replace-with-your-file.pdf"]
+    }
+  ],
+  "fallback_template": "Hi {sender_name},\n\nThanks for your email. I have received your message and will follow up shortly.\n\n{signature}"
+}
